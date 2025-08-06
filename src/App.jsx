@@ -44,7 +44,7 @@ function FlashCard({ content }) {
       initial={{ y: direction * 750}}
       animate={{ y: 0 }}
       exit={{ y: -direction * 750}}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.1 }}
       className="absolute w-[40vw] h-[95vh] bg-orange-50 shadow-lg rounded-lg flex flex-col justify-center text-center p-6"
     >
       <h1 className="font-['Playfair_Display'] text-yellow-900 mb-4">{content.title}</h1>
@@ -57,7 +57,7 @@ function ArrowButton({ direction = "up", onClick }) {
   const Icon = direction === "up" ? FaArrowUp : FaArrowDown;
 
   return (
-    <button onClick={onClick} className="text-2xl text-blue-500 hover:text-blue-700">
+    <button onClick={onClick} className="text-2xl text-teal-800 hover:border-teal-800 shadow-sm">
       <Icon />
     </button>
   );
@@ -92,7 +92,7 @@ export default function MyApp() {
       <img 
         src={logo}
         alt="Soph" 
-        className="absolute top-4 left-4 w-20 h-20 object-contain"
+        className="absolute top-4 left-4 w-28 h-28 object-contain shadow-sm"
       />
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[20vw]">
         <TextFields />
