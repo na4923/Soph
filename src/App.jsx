@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { motion } from "motion/react"
-import { AnimatePresence } from "motion/react"
+import { motion , AnimatePresence, usePresenceData } from "motion/react"
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import logo from './logo.png';
 import './App.css';
@@ -38,14 +37,14 @@ function TextFields() {
   )
 }
 
-function FlashCard({ content, direction }) {
-  const offset = direction > 0 ? 750 : -750;
+function FlashCard({ content }) {
+  const direction = usePresenceData();
   return (
     <motion.div
-      initial={{ y: offset }}
+      initial={{ y: direction * 750}}
       animate={{ y: 0 }}
-      exit={{ y: -offset }}
-      transition={{duration:0.2}}
+      exit={{ y: -direction * 750}}
+      transition={{ duration: 0.2 }}
       className="absolute w-[40vw] h-[95vh] bg-orange-50 shadow-lg rounded-lg flex flex-col justify-center text-center p-6"
     >
       <h1 className="font-['Playfair_Display'] text-yellow-900 mb-4">{content.title}</h1>
@@ -69,7 +68,7 @@ export default function MyApp() {
     { title: "This Will Be the Title", body: "And this is where the wisdom will be." }
   ]); 
   const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
+  const [direction, setDirection] = useState(1);
 
   function nextCard() {
     setDirection(1);
@@ -84,8 +83,8 @@ export default function MyApp() {
   }
 
   function prevCard() {
-    setIndex((prev) => Math.max(prev - 1, 0));
     setDirection(-1);
+    setIndex((prev) => Math.max(prev - 1, 0));
   }
 
   return (
@@ -98,8 +97,8 @@ export default function MyApp() {
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[20vw]">
         <TextFields />
       </div>
-      <AnimatePresence mode="wait">
-        <FlashCard key={index} content={cards[index]} direction={direction}/>
+      <AnimatePresence mode="wait" custom={direction}>
+        <FlashCard key={index} content={cards[index]} />
       </AnimatePresence>
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
         <ArrowButton direction="up" onClick={prevCard} />
