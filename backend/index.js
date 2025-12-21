@@ -13,13 +13,13 @@ app.use(express.json());
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-app.post('/api/fact', async (req, res) => {
+app.get('/api/fact', async (req, res) => {
   const { feedback } = req.body;
 
   try {
-    const prompt = buildPrompt(topic, tone, complexity);
+    const prompt = buildPrompt(feedback);
     const response = await openai.chat.completions.create({
-      model: "gpt-4",
+      model: "gpt-5-turbo",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.8,
     });
@@ -31,6 +31,10 @@ app.post('/api/fact', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch fact from OpenAI.' });
   }
 });
+
+function addFeedback(existingFeedback, newFeedback) {
+  //TODO
+}
 
 function buildPrompt(feedback) {
   return `Explain an interesting fact or concept. Avoid buzzwords, 
