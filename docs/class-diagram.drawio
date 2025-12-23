@@ -1,0 +1,56 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
+  <diagram name="Page-1" id="TvxxmCbOUD-tgTcz7zrR">
+    <mxGraphModel dx="996" dy="602" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-3" edge="1" parent="1" source="2bFSKrTTpkYitflJ5kWM-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="2bFSKrTTpkYitflJ5kWM-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-5" edge="1" parent="1" source="2bFSKrTTpkYitflJ5kWM-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="2bFSKrTTpkYitflJ5kWM-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="App.js" vertex="1">
+          <mxGeometry height="60" width="120" x="370" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-11" edge="1" parent="1" source="2bFSKrTTpkYitflJ5kWM-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="2bFSKrTTpkYitflJ5kWM-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-2" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="facts.js" vertex="1">
+          <mxGeometry height="60" width="120" x="500" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-7" edge="1" parent="1" source="2bFSKrTTpkYitflJ5kWM-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="2bFSKrTTpkYitflJ5kWM-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-4" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="users.js" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-19" edge="1" parent="1" source="2bFSKrTTpkYitflJ5kWM-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-6" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="User" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-18" edge="1" parent="1" source="2bFSKrTTpkYitflJ5kWM-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-10" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="FactEngine" vertex="1">
+          <mxGeometry height="60" width="120" x="590" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-13" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="LearningProfile" vertex="1">
+          <mxGeometry height="70" width="210" x="320" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-14" parent="2bFSKrTTpkYitflJ5kWM-13" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Topic List" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2bFSKrTTpkYitflJ5kWM-15" parent="2bFSKrTTpkYitflJ5kWM-13" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Complexity Level" vertex="1">
+          <mxGeometry height="30" width="60" x="110" y="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
