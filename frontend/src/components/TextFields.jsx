@@ -3,7 +3,7 @@ import Feedback from './Feedback.jsx';
 
 function TextFields() {
   return(
-    <div className="flex flex-col align-self-center space-y-4">
+    <div className="flex flex-col space-y-4 my-20">
       <p>
         Ask me a question
       </p>

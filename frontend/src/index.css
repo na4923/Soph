@@ -13,15 +13,17 @@
 
 body {
     font-family: 'Fira Sans', sans-serif;
+    font-size: large;
     color: var(--color-charcoal);
   }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+    font-size: xx-large;
     color: var(--color-sepia);
   }
 @layer components {
-  .button {
-    @apply text-2xl text-teal hover:border-gold shadow-sm;
+  .btn {
+    @apply text-2xl rounded-full bg-wood text-teal hover:bg-gold p-1 shadow-md;
   }
 }

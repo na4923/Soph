@@ -1,15 +1,17 @@
 import { useState } from 'react';
-
 import SideBar from './components/SideBar.jsx';
 import FlashCard from './components/FlashCard.jsx';
 import ArrowButtons from './components/ArrowButtons.jsx';
 import './index.css';
 
 function App() {
+
+  const [cardIndex, setCardIndex] = useState(0);
+
   return (
-    <div className="bg-parchment w-screen h-screen flex flex-row items-center space-x-10 p-4">
+    <div className="bg-parchment w-screen h-screen flex flex-row items-center justify-between space-x-10 p-4">
       <SideBar />
-      <FlashCard /*index={cardIndex}*/ />
+      <FlashCard index={cardIndex} />
       <ArrowButtons />
     </div>
   );
